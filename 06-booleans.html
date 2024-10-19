@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof true); // its a boolean
+      console.log(typeof "true"); // its string
+      console.log(3 < 5);
+      console.log(3 === 3);
+      console.log(3 !== 4);
+      // == sign converts both the values into same type and compare them which is not a good way to do, so in JS === is used.
+      console.log(5 == "5.00");
+
+      // If statements
+      if (true) {
+        alert("hello");
+      } else {
+        alert("world");
+      }
+
+      const age = 19;
+      if (age >= 18) {
+        console.log("you are eligible to vote");
+      } else if (age <= 17) {
+        console.log("you are almost there");
+      } else {
+        console.log("Go and study");
+      }
+
+      // Logical Operators '&&', '||'
+      console.log(true && false); // Here if one operand is false then result is false
+      console.log(true || false); // Here if one operand is true result is true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      // const product = {
+      //   name: "pavan",
+      //   age: 25,
+      //   roll: 170040850,
+      // };
+      // console.log(product);
+      // console.log(product.name);
+      // console.log(product.roll);
+
+      // product.name = "pavan kumar"; //update existing value
+      // product.avg = 99.99; // add a new value
+      // console.log(product);
+
+      // const product2 = {
+      //   name: "shoes",
+      //   price: 2000,
+      //   ratings: {
+      //     // nested objects
+      //     "five-star": 2,
+      //     "four-star": 3,
+      //     "three-star": 2,
+      //   },
+      //   fun: function myShoes() {
+      //     // function can be placed inside an object => this whole is called a 'method'
+      //     console.log("These are my shoes");
+      //   },
+      // };
+      // console.log(product2.ratings["four-star"]);
+      // console.log(product2["ratings"]);
+      // product2.fun();
+
+      // console.log(JSON.stringify(product2)); // JS object to JSON
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      const obj1 = {
+        message: "hello",
+      };
+
+      const obj2 = obj1; // copying the reference but not the actual object
+      console.log(obj2);
+      obj1.message = "Greetings to you"; // const also can be updated as the reference is being updated
+      console.log(obj1);
+
+      const obj3 = {
+        message: "hello",
+      };
+      console.log(obj1 === obj3); // gives false as the reference are being compared but not the values
+      console.log(obj1 === obj2); // gives True as both have the same references
+
+      //Shortcuts for objects
+      const obj4 = {
+        message: "hello",
+        price: 100,
+      };
+      const { message, price } = obj4;
+      console.log(message);
+      console.log(price);
+
+      const obj5 = {
+        message, // if the property and the variable name are same no need to write like message: message, instead use this
+        price,
+      };
+      console.log(obj5);
+      const obj6 = {
+        message,
+        price,
+        method() {
+          console.log("this is a function inside of an object");
+        },
+      };
+      obj6.method();
+    </script>
+  </body>
+</html>
